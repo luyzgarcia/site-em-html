@@ -1,0 +1,663 @@
+@font-face {
+	font-family: signika_regular;
+	src: url('../fonts/Signika-Regular.ttf');
+}
+@font-face {
+	font-family: signika_light;
+	src: url('../fonts/Signika-Light.ttf');
+}
+@font-face {
+	font-family: din_light;
+	src: url('../fonts/din_light.ttf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #fff;
+	width: 20000px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	overflow-x: hidden;
+}
+.section {
+	background: #82cfca;
+	width: 2000px;
+	float: left;
+	display: inline;
+	position: relative;
+	height: 100%;
+	margin: 0px 800px;
+}
+.home {
+	margin-left: 0;
+}
+.logo_imagem {
+	margin: 160px 200px 0px 0px;
+	right: 0;
+	position: absolute;
+}
+.home_inner, .cobertura_inner, .apartamentos_inner, .localizacao_inner {
+	width: 82%;
+	float: left;
+	font-size: 0.85em;
+	position: relative;
+	color: #686868;
+	margin: 30px 35px 0px 40px;
+	padding: 0px;
+	display: inline;
+	height: 94%;
+}
+.section h2 {
+	margin: 50px 0px 30px 0px;
+}
+.cobertura, .apartamentos, .comerciais, .localizacao {
+	opacity: 0;
+}
+	
+.home {
+	color: #fff;
+	background: #fff url('../images/bg_home2.jpg') no-repeat top left;
+	background-size: 100%;
+}
+.cobertura {
+	background: #fff url('../images/bg_cobertura1.jpg') no-repeat top left;
+	background-size: 100% 100%;
+	
+}
+.apartamentos {
+	color: #fff;
+	background: #fff url('../images/bg_apartamentos1.jpg') no-repeat top left;
+	background-size: 100% 100%;
+}
+.comerciais {
+	color: #fff;
+	background: #fff url('../images/bg_comerciais1.jpg') no-repeat top left;
+	background-size: 100% 100%;
+}
+
+.localizacao_inner {
+	background: #fff;
+	background-image: none;
+}
+
+
+.section .nav {
+	list-style: none;
+	margin: 20px 0px 0px 550px;
+	z-index: 999;	
+	bottom: 0px;
+	position: fixed;
+	list-style: none;
+	margin: 20px 0px 30px 300px;	
+	width: 70%;
+}
+.section .nav li {
+	/*float: left;
+	padding: 15px 30px 0px 20px;
+	text-align: right;
+	width: 175px;
+	height: 100px;*/
+	float: left;
+	padding: 1.33% 2.56% 0px 1.77%;
+	text-align: right;
+	width: 13.555%;
+	height: 80px;
+}
+
+.section .nav .active, .section .nav_mini .active {
+	background: #fff;
+	color: #a7a9a9;
+}
+
+.section ul a, .section ul li{
+	font-family: 'signika_regular';
+	font-size: 17px;
+	font-weight: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #fff;
+}
+
+.nav_mini {
+	display: none;
+	list-style: none;
+	margin: 20px 0px 0px 550px;
+	z-index: 999;	
+	bottom: 0px;
+	position: fixed;
+	list-style: none;
+	margin: 20px 0px 30px 300px;	
+	z-index: 1;
+	width: 70%;
+}
+.nav_mini li {
+	float: left;
+	padding: 0% 2.66% 0px 1.77%;
+	text-align: right;
+	width: 13.555%;
+	height: 10px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.bt_home {
+	background-color: #686868;
+}
+.bt_cobertura {
+	background-color: #82cfca;
+}
+.bt_apartamentos {
+	background-color: #8a2529;
+}
+.bt_salas {
+	background-color: #fcb040;
+}
+.bt_localizacao {
+	background-color: #024f4a;
+}
+
+#content {
+	float: left;
+	height: 100%;
+	margin: 0;
+	background: #82cfca;
+}
+.logo_elvira {
+	background: transparent url('../images/logo_elvira.png') no-repeat left top;
+	width: 125px;
+	height: 177px;
+	margin-top: 25px;
+	margin-left: 55px;
+	display: inline-block;
+	z-index: 999;
+	position: absolute;
+	background-size: 100%;
+}
+
+.footer h3 {
+	position: fixed;
+	bottom: 7px;
+	right: 30px;
+}
+.footer h3 a, .footer h3, .footer h3 a:active{
+	font: normal 11px "din_light", Tahoma;
+	color: #686868;
+	text-decoration: none;
+	
+}
+
+.localizacao_mapa {
+	height: 100%;
+	margin-left: -15px;
+}
+
+.localizacao_detalhes {
+	width: 35%;
+	background: #a7a9a9;
+	position: absolute;
+	right: 0;
+	height: 100%;
+	top: 0;
+}
+
+.detalhes_titulo {
+	margin: 100px 0px 35px 70px;
+	
+}
+.detalhes_titulo h3 {
+	margin-bottom: 9px;
+}
+.detalhes_titulo hr {
+	border: 1px outset #000;
+	border-bottom: none;
+	width: 230; 
+	
+}
+.detalhes_corpo {
+	margin: 0px 200px 35px 70px;
+}
+.detalhes_corpo h4 {
+	font: normal 28px "signika_regular", Tahoma;
+	color: #fff;
+	line-height: 38px;
+}
+.detalhes_corpo p {
+	margin-top: 30px;
+	font: normal 15px "signika_regular", Tahoma;
+	color: #fff;
+	line-height: 22px;
+}
+
+.localizacao_detalhes .detalhes_titulo h3{
+	
+	font: normal 18px 'signika_regular';
+	color: #515151 ;
+}
+
+.compartilhar {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 0px 40px 60px 0px;
+	z-index: 9999;
+}
+.compartilhar h5 {
+	margin-bottom: 5px;
+	font: normal 12px "signika_regular", Tahoma;
+	color: #58595b;
+	margin-left: -5px;
+}
+.compartilhar ul {
+	list-style: none;
+}
+.compartilhar ul li {
+	/*float: left;*/
+	margin: -2px 0px;
+	text-align: right;
+	width: 59px;
+	height: 60px;
+}
+.compartilhar .facebook {
+	background: transparent url('../images/bt_compartilhe.png') no-repeat left top;
+}
+.compartilhar .twitter {
+	background: transparent url('../images/bt_compartilhe.png') no-repeat -59px top;
+}
+.compartilhar .google {
+	background: transparent url('../images/bt_compartilhe.png') no-repeat -118px top;
+}
+
+.detalhe_cobertura {
+	display: inline-block;
+	margin: 100px 0px 0px 200px;
+}
+.detalhe_comerciais {
+	margin-left: 350px !important;
+}
+
+.detalhe_cobertura .planta_cobertura .ver_planta {
+	font: normal 14px "signika_regular", Tahoma;
+	color: #fff;
+	background: #82cfca url('../images/bt_verplanta.png') no-repeat bottom left;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	cursor: pointer;
+}
+.detalhe_cobertura .planta_cobertura .ver_planta:hover {
+	background-position: top left;
+}
+.ver_planta_ativo {
+	background: #024f4a !important;
+}
+.detalhe_cobertura .planta_cobertura .ver_planta h4 {
+	padding: 45px 5px 0px 5px;
+}
+.detalhe_cobertura .planta_cobertura .planta, .detalhe_cobertura .planta_cobertura .ver_planta, .descricao_cobertura, .imagens_cobertura, .planta_cobertura, .descricao_cobertura, .grupo_descricao{
+	float: left;
+}
+.detalhe_cobertura .planta_cobertura .planta {
+	margin: 15px 0px 0px -100px;
+}
+#apartamentos .planta_cobertura .planta {
+	margin-top: 35px;
+}
+.detalhe_cobertura .planta_cobertura .planta img {
+	width: 500px;
+}
+.detalhe_cobertura .planta_cobertura .planta ul{
+	list-style: none;
+}
+
+.descricao_cobertura {
+	text-align: center;
+	width: 280px;
+	background: #fff;
+	margin: 0px 20px;
+}
+#comerciais .descricao_cobertura {
+	width: 350px;
+	padding-bottom: 30px;
+}
+#comerciais .descricao_cobertura h2, #comerciais .descricao_cobertura span, #comerciais .grupo_descricao h3{
+	color: #fcb040 !important;
+}
+.descricao_cobertura h2 {
+	color: #82cfca;
+	font: normal 40px "signika_regular", Tahoma;
+}
+.descricao_cobertura p {
+	color: #666666;
+	font: normal 14px "signika_regular", Tahoma;
+	margin: 20px 35px;
+	line-height: 18pt;
+	text-align: left;
+}
+.descricao_cobertura h5 {
+	margin-right: 35px;
+	text-align: right;
+	color: #808285;
+	font: normal 12px "signika_light", Tahoma;
+}
+.descricao_cobertura h5 span {
+	color: #82cfca;
+	font: normal 24px "signika_regular", Tahoma;
+}
+.icones {
+	text-align: center;
+}
+.icones img {
+	margin: 15px 5px;
+}
+
+.imagens_cobertura .grupo h3 {
+	
+}
+.imagens_cobertura .grupo img {
+	margin-bottom: 5px;
+	width: 188px;
+	height: 100px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.grupo_descricao {
+	margin-left: 20px;
+}
+
+.grupo_descricao h3 {
+	font: normal 21px "signika_regular", Tahoma;
+	color: #82cfca;
+	margin-bottom: 10px;
+}
+.grupo_descricao ul {
+	list-style: none;
+}
+.grupo_descricao ul li {
+	font: normal 14px "signika_regular", Tahoma;
+	color: #fff;
+	padding: 3px 0px;
+}
+
+.imagem_grande {
+	background: none !important;
+	padding: 0 !important;
+}
+
+.fundo_verde {
+	height: 100px;
+	background: #82cfca;
+	width: 75px;
+	float: left;
+}
+#apartamentos .fundo_verde, #apartamentos .detalhe_cobertura .planta_cobertura .ver_planta {
+	background: #8a2529;
+}
+#apartamentos .detalhe_cobertura .planta_cobertura .ver_planta:hover {
+	background: #8a2529 url('../images/ver_planta_red.jpg') no-repeat left top;
+}
+#apartamentos .descricao_cobertura h2, #apartamentos .descricao_cobertura span, #apartamentos .grupo_descricao h3 {
+	color: #8a2529;
+}
+#comerciais .fundo_verde {
+	background: #fcb040 !important;
+}
+
+.fixo_top, .fixo_right, .fixo_bottom, .fixo_left {
+	position: fixed;
+	background: #FFF;
+	z-index: 99999;
+}
+.fixo_top {
+	width: 100%;
+	height: 30px;
+}
+.fixo_right {
+	width: 25px;
+	height: 100%;
+	right: 0px;
+}
+.fixo_bottom {
+	bottom: 0px;
+	height: 30px;
+	width: 100%;
+}
+.fixo_left {
+	width: 25px;
+	height: 100%;
+	left: 0px;
+}
+.bt_left {
+	background: transparent url('../images/seta_left.png') no-repeat ;
+	position: fixed;
+	top: 35%;
+	width: 60px;
+	height: 200px;
+	margin-left: 24px;
+	z-index: 999999;
+}
+.bt_left a {
+	position: fixed;
+	padding-top: 74px;
+	margin: 9px 0px 9px -5px;
+}
+.bt_right {
+	background: transparent url('../images/seta_right.png') no-repeat ;
+	position: fixed;
+	top: 35%;
+	width: 60px;
+	height: 200px;
+	right: 19px;
+	z-index: 999999;
+}
+.bt_right a {
+	position: fixed;
+	padding-top: 74px;
+	margin: 9px 0px 9px 18px;
+}
+.back {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #000;
+	opacity: 0;
+}
+.inner .detalhe {
+	display: none;
+	width: 2000;
+}
+
+.contato_wrapper {
+	bottom: 0px;
+	position: fixed;
+	padding-right: 130px;
+	margin-bottom: 30px;
+	z-index: 999;
+}
+.bt_contato {
+	margin: 0px 0px 40px 70px;
+}
+.bt_contato a, .bt_contato a:hover{
+	/*background: white;*/
+	border-radius: 3px;
+	padding: 15px 40px;
+	background-color:#fcb040;	
+	background-image: linear-gradient(to bottom, rgba(254,201,129,1), rgba(254,201,129,.6) 49%, rgba(254,201,129,0) 50%, rgba(254,201,129,.4));
+	background-image: -moz-linear-gradient(top, rgba(254,201,129,1), rgba(254,201,129,.6) 49%, rgba(254,201,129,0) 50%, rgba(254,201,129,.4));
+	background-image: -webkit-gradient(top, rgba(254,201,129,1), rgba(254,201,129,.6) 49%, rgba(254,201,129,0) 50%, rgba(254,201,129,.4));
+	background-image: -webkit-linear-gradient(top, rgba(254,201,129,1), rgba(254,201,129,.6) 49%, rgba(254,201,129,0) 50%, rgba(254,201,129,.4));
+	color: #fff;
+	text-decoration: none;
+	font-family: signika_regular;
+}
+.contato {
+	position: absolute;
+	margin: -430px 0px 0px 25px;
+	display: none;
+}
+.contato_inner {
+	background: #fcb040;
+	padding: 1px;
+}
+.contato_inner p{
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: signika_regular;
+	font-size: 13px;
+}
+.contato .seta {
+	background: transparent url('../images/seta_formulario.png') no-repeat bottom center;
+	height: 15px;
+	margin-top: -3px;
+}
+.contato form {
+	margin: 20px 15px 50px 0px;
+}
+.contato h4 {
+	float: left;
+	display: block;
+	width: 80px;
+}
+
+.campo_contato {
+	margin: 5px 10px 5px 30px;
+	font-family: signika_regular;
+	font-size: 13px;
+}
+.campo_contato input, .campo_contato textarea, .campo_contato select {
+	width: 160px;
+	background: #fdbf68;
+	border: 1px solid #fdb958;
+	height: 20px;
+	border-radius: 2px;
+	padding: 0px 10px 0px 10px
+}
+.campo_contato textarea {
+	overflow: hidden;
+	resize: none;
+	height: 120px;
+}
+.bt_enviar {
+	right: 0;
+	position: absolute;
+	margin-right: 25px;
+}
+.bt_enviar input[type="submit"] {
+	border: 1px solid #b85d32;
+	background-color: #8a2529;
+	color: #fff;
+	padding: 5px 15px;
+}
+.andar {
+	position: fixed;
+	right: 0px;
+	margin: 30px 0px;
+	background: transparent url(../images/miniatura_predio.png) no-repeat;
+	z-index: 99999;
+	width: 150px;
+	height: 120px;
+}
+.andar p {
+	border: 2px solid #000;
+	width: 32px;
+	height: 12px;
+	border-radius: 2px;
+	margin-top: 0px;
+	margin-left: 55px;
+	display: none;
+}
+
+
+
+@media (max-width: 480px) {
+	.fixo_right, .fixo_left {
+		display: none;
+	}
+	
+	.logo_imagem {
+		margin: 0 auto;
+	}
+	.logo_imagem img {
+		width: 300px;
+		margin-top: 200;
+	}
+	.nav {
+		display: none;
+	}
+	.section {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		width: auto;
+		margin: 40px 20px;
+	}
+	.detalhe {
+		display: inline-block !important;
+		width: 100% !important;
+	}
+	.detalhe_cobertura {
+		margin: 0px;
+		
+		
+	}
+	
+}
+@media (max-width :860)  {
+	.fundo_verde {
+		height: 45px;
+		width: 25px;
+	}
+	.imagens_cobertura .grupo img {
+		width: 105px;
+		height: 45px;
+	}
+	.esticada {
+		width: 250px !important;
+		height: 170px !important;
+	}
+	.detalhe_cobertura .planta_cobertura .planta img {
+			width: 200px;
+	}
+}
+@media (min-width : 860px) and (max-width :1400)  {
+	.fundo_verde {
+		height: 75px;
+		width: 55px;
+	}
+	.imagens_cobertura .grupo img {
+		width: 145px;
+		height: 75px;
+	}
+	.esticada {
+		width: 450px !important;
+		height: 270px !important;
+	}
+	
+	.detalhe_cobertura .planta_cobertura .planta img {
+		width: 300px;
+	}
+	.logo_elvira {
+		width: 100px;
+		height: 140px;
+		background-size: 100%;
+	}
+}
+@media (min-width: 1401) {
+	.esticada {
+		width: 600px !important;
+		height: 380px !important;
+	}
+		
+}
+.esticada, .logo_elvira {
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}

@@ -1,0 +1,74 @@
+@font-face {
+	font-family: signika_regular;
+	src: url('../fonts/Signika-Regular.ttf');
+}
+@font-face {
+	font-family: signika_bold;
+	src: url('../fonts/Signika-Bold.ttf');
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #fff;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	overflow-x: hidden;
+	text-align: center;
+}
+.header {
+	background: #e1d7cb;
+	width: 100%;
+	height: 20%;
+}
+.header_texto {
+	padding-top: 30px;
+}
+.header h3 {
+	font: normal 14px "signika_regular", Tahoma;
+	color: #000;
+}
+.header h3 b{
+	font: normal 14px "signika_bold", Tahoma;
+}
+
+.corpo {
+	background: #e9e3dc;
+	height: 80%;
+	text-align: center;
+	
+}
+.corpo h4 {
+	font: normal 22px "signika_regular", Tahoma;
+	color: #bca385;
+	width: 500px;
+	padding-top: 30px;
+	display: inline-block;
+	line-height: 26pt;
+}
+.corpo h4 b {
+	font: normal 22px "signika_bold", Tahoma;
+}
+
+.footer {
+	
+}
+
+.footer h3 {
+	position: fixed;
+	bottom: 30px;
+	right: 50px;
+}
+.footer h3 a, .footer h3, .footer h3 a:active{
+	font: normal 11px "din_light", Tahoma;
+	color: #686868;
+	text-decoration: none;
+}
+.footer a {
+	font-weight: bold !important;
+}
+.imagem_centro img {
+	margin-top: -100px;
+}
