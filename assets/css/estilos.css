@@ -1,91 +1,78 @@
 @font-face {
 	font-family: signika_regular;
-	src: url('../fonts/Signika-Regular.ttf');
+	src: url('../fonts/Signika-Regular.ttf'),
+	 	url('../fonts/Signika-Regular.eot');
 }
 @font-face {
 	font-family: signika_light;
-	src: url('../fonts/Signika-Light.ttf');
+	src: url('../fonts/Signika-Light.ttf'),
+		 url('../fonts/Signika-Light.eot');
 }
 @font-face {
 	font-family: din_light;
-	src: url('../fonts/din_light.ttf');
+	src: url('../fonts/din_light.ttf'),
+		 url('../fonts/din_light.eot');
 }
-
-* {
-	margin: 0;
-	padding: 0;
+*{
+    margin:0;
+    padding:0;
 }
-body {
-	background: #fff;
-	width: 20000px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	overflow-x: hidden;
-}
-.section {
+body{
+    background:red;
+    font-family:Georgia;
+    font-size: 34px;
+    font-style: italic;
+    letter-spacing:-1px;
+    width:20000px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+	overflow:hidden;
 	background: #82cfca;
-	width: 2000px;
-	float: left;
-	display: inline;
-	position: relative;
-	height: 100%;
-	margin: 0px 800px;
 }
-.home {
-	margin-left: 0;
+.section{
+    margin:0px;
+    bottom:0px;
+    width:4000px;
+    float:left;
+    height:100%;
+	background-color: #82cfca;
 }
-.logo_imagem {
-	margin: 160px 200px 0px 0px;
-	right: 0;
-	position: absolute;
-}
-.home_inner, .cobertura_inner, .apartamentos_inner, .localizacao_inner {
-	width: 82%;
-	float: left;
-	font-size: 0.85em;
-	position: relative;
-	color: #686868;
-	margin: 30px 35px 0px 40px;
-	padding: 0px;
-	display: inline;
-	height: 94%;
-}
-.section h2 {
-	margin: 50px 0px 30px 0px;
-}
-.cobertura, .apartamentos, .comerciais, .localizacao {
-	opacity: 0;
-}
-	
 .home {
 	color: #fff;
-	background: #fff url('../images/bg_home2.jpg') no-repeat top left;
-	background-size: 100%;
+	background: #82cfca url('../images/bg_home2.jpg') no-repeat top left;
 }
 .cobertura {
-	background: #fff url('../images/bg_cobertura1.jpg') no-repeat top left;
-	background-size: 100% 100%;
-	
+	background: #82cfca url('../images/bg_cobertura2.jpg') no-repeat top left;
+	/*background-size: 100% 100%;*/
 }
 .apartamentos {
-	color: #fff;
-	background: #fff url('../images/bg_apartamentos1.jpg') no-repeat top left;
-	background-size: 100% 100%;
+	background: #82cfca url('../images/bg_apartamentos2.jpg') no-repeat top left;
 }
 .comerciais {
-	color: #fff;
-	background: #fff url('../images/bg_comerciais1.jpg') no-repeat top left;
-	background-size: 100% 100%;
+	background: #82cfca url('../images/bg_comerciais2.jpg') no-repeat top left;
 }
-
-.localizacao_inner {
-	background: #fff;
-	background-image: none;
+/*desenho do andar no canto direito*/
+.andar {
+	position: fixed;
+	right: 0px;
+	margin: 30px 0px;
+	background: transparent url(../images/miniatura_predio.png) no-repeat;
+	z-index: 99999;
+	width: 150px;
+	height: 120px;
 }
-
-
+.andar p {
+	border: 2px solid #000;
+	width: 32px;
+	height: 12px;
+	border-radius: 2px;
+	margin-top: 0px;
+	margin-left: 55px;
+	display: none;
+}
+/*fim do andar*/
 .section .nav {
 	list-style: none;
 	margin: 20px 0px 0px 550px;
@@ -97,23 +84,12 @@ body {
 	width: 70%;
 }
 .section .nav li {
-	/*float: left;
-	padding: 15px 30px 0px 20px;
-	text-align: right;
-	width: 175px;
-	height: 100px;*/
 	float: left;
 	padding: 1.33% 2.56% 0px 1.77%;
 	text-align: right;
 	width: 13.555%;
 	height: 80px;
 }
-
-.section .nav .active, .section .nav_mini .active {
-	background: #fff;
-	color: #a7a9a9;
-}
-
 .section ul a, .section ul li{
 	font-family: 'signika_regular';
 	font-size: 17px;
@@ -121,298 +97,27 @@ body {
 	text-transform: none;
 	text-decoration: none;
 	color: #fff;
+	font-style:normal;
 }
-
-.nav_mini {
-	display: none;
-	list-style: none;
-	margin: 20px 0px 0px 550px;
-	z-index: 999;	
-	bottom: 0px;
-	position: fixed;
-	list-style: none;
-	margin: 20px 0px 30px 300px;	
-	z-index: 1;
-	width: 70%;
-}
-.nav_mini li {
-	float: left;
-	padding: 0% 2.66% 0px 1.77%;
-	text-align: right;
-	width: 13.555%;
-	height: 10px;
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-}
-.bt_home {
+.nav .bt_home {
 	background-color: #686868;
 }
-.bt_cobertura {
+.nav .bt_cobertura {
 	background-color: #82cfca;
 }
-.bt_apartamentos {
+.nav .bt_apartamentos {
 	background-color: #8a2529;
 }
-.bt_salas {
+.nav .bt_salas {
 	background-color: #fcb040;
 }
-.bt_localizacao {
+.nav .bt_localizacao {
 	background-color: #024f4a;
 }
-
-#content {
-	float: left;
-	height: 100%;
-	margin: 0;
-	background: #82cfca;
-}
-.logo_elvira {
-	background: transparent url('../images/logo_elvira.png') no-repeat left top;
-	width: 125px;
-	height: 177px;
-	margin-top: 25px;
-	margin-left: 55px;
-	display: inline-block;
-	z-index: 999;
-	position: absolute;
-	background-size: 100%;
-}
-
-.footer h3 {
-	position: fixed;
-	bottom: 7px;
-	right: 30px;
-}
-.footer h3 a, .footer h3, .footer h3 a:active{
-	font: normal 11px "din_light", Tahoma;
-	color: #686868;
-	text-decoration: none;
-	
-}
-
-.localizacao_mapa {
-	height: 100%;
-	margin-left: -15px;
-}
-
-.localizacao_detalhes {
-	width: 35%;
-	background: #a7a9a9;
-	position: absolute;
-	right: 0;
-	height: 100%;
-	top: 0;
-}
-
-.detalhes_titulo {
-	margin: 100px 0px 35px 70px;
-	
-}
-.detalhes_titulo h3 {
-	margin-bottom: 9px;
-}
-.detalhes_titulo hr {
-	border: 1px outset #000;
-	border-bottom: none;
-	width: 230; 
-	
-}
-.detalhes_corpo {
-	margin: 0px 200px 35px 70px;
-}
-.detalhes_corpo h4 {
-	font: normal 28px "signika_regular", Tahoma;
-	color: #fff;
-	line-height: 38px;
-}
-.detalhes_corpo p {
-	margin-top: 30px;
-	font: normal 15px "signika_regular", Tahoma;
-	color: #fff;
-	line-height: 22px;
-}
-
-.localizacao_detalhes .detalhes_titulo h3{
-	
-	font: normal 18px 'signika_regular';
-	color: #515151 ;
-}
-
-.compartilhar {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	margin: 0px 40px 60px 0px;
-	z-index: 9999;
-}
-.compartilhar h5 {
-	margin-bottom: 5px;
-	font: normal 12px "signika_regular", Tahoma;
-	color: #58595b;
-	margin-left: -5px;
-}
-.compartilhar ul {
-	list-style: none;
-}
-.compartilhar ul li {
-	/*float: left;*/
-	margin: -2px 0px;
-	text-align: right;
-	width: 59px;
-	height: 60px;
-}
-.compartilhar .facebook {
-	background: transparent url('../images/bt_compartilhe.png') no-repeat left top;
-}
-.compartilhar .twitter {
-	background: transparent url('../images/bt_compartilhe.png') no-repeat -59px top;
-}
-.compartilhar .google {
-	background: transparent url('../images/bt_compartilhe.png') no-repeat -118px top;
-}
-
-.detalhe_cobertura {
-	display: inline-block;
-	margin: 100px 0px 0px 200px;
-}
-.detalhe_comerciais {
-	margin-left: 350px !important;
-}
-
-.detalhe_cobertura .planta_cobertura .ver_planta {
-	font: normal 14px "signika_regular", Tahoma;
-	color: #fff;
-	background: #82cfca url('../images/bt_verplanta.png') no-repeat bottom left;
-	width: 120px;
-	height: 120px;
-	text-align: center;
-	cursor: pointer;
-}
-.detalhe_cobertura .planta_cobertura .ver_planta:hover {
-	background-position: top left;
-}
-.ver_planta_ativo {
-	background: #024f4a !important;
-}
-.detalhe_cobertura .planta_cobertura .ver_planta h4 {
-	padding: 45px 5px 0px 5px;
-}
-.detalhe_cobertura .planta_cobertura .planta, .detalhe_cobertura .planta_cobertura .ver_planta, .descricao_cobertura, .imagens_cobertura, .planta_cobertura, .descricao_cobertura, .grupo_descricao{
-	float: left;
-}
-.detalhe_cobertura .planta_cobertura .planta {
-	margin: 15px 0px 0px -100px;
-}
-#apartamentos .planta_cobertura .planta {
-	margin-top: 35px;
-}
-.detalhe_cobertura .planta_cobertura .planta img {
-	width: 500px;
-}
-.detalhe_cobertura .planta_cobertura .planta ul{
-	list-style: none;
-}
-
-.descricao_cobertura {
-	text-align: center;
-	width: 280px;
-	background: #fff;
-	margin: 0px 20px;
-}
-#comerciais .descricao_cobertura {
-	width: 350px;
-	padding-bottom: 30px;
-}
-#comerciais .descricao_cobertura h2, #comerciais .descricao_cobertura span, #comerciais .grupo_descricao h3{
-	color: #fcb040 !important;
-}
-.descricao_cobertura h2 {
-	color: #82cfca;
-	font: normal 40px "signika_regular", Tahoma;
-}
-.descricao_cobertura p {
-	color: #666666;
-	font: normal 14px "signika_regular", Tahoma;
-	margin: 20px 35px;
-	line-height: 18pt;
-	text-align: left;
-}
-.descricao_cobertura h5 {
-	margin-right: 35px;
-	text-align: right;
-	color: #808285;
-	font: normal 12px "signika_light", Tahoma;
-}
-.descricao_cobertura h5 span {
-	color: #82cfca;
-	font: normal 24px "signika_regular", Tahoma;
-}
-.icones {
-	text-align: center;
-}
-.icones img {
-	margin: 15px 5px;
-}
-
-.imagens_cobertura .grupo h3 {
-	
-}
-.imagens_cobertura .grupo img {
-	margin-bottom: 5px;
-	width: 188px;
-	height: 100px;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-}
-.grupo_descricao {
-	margin-left: 20px;
-}
-
-.grupo_descricao h3 {
-	font: normal 21px "signika_regular", Tahoma;
-	color: #82cfca;
-	margin-bottom: 10px;
-}
-.grupo_descricao ul {
-	list-style: none;
-}
-.grupo_descricao ul li {
-	font: normal 14px "signika_regular", Tahoma;
-	color: #fff;
-	padding: 3px 0px;
-}
-
-.imagem_grande {
-	background: none !important;
-	padding: 0 !important;
-}
-
-.fundo_verde {
-	height: 100px;
-	background: #82cfca;
-	width: 75px;
-	float: left;
-}
-#apartamentos .fundo_verde, #apartamentos .detalhe_cobertura .planta_cobertura .ver_planta {
-	background: #8a2529;
-}
-#apartamentos .detalhe_cobertura .planta_cobertura .ver_planta:hover {
-	background: #8a2529 url('../images/ver_planta_red.jpg') no-repeat left top;
-}
-#apartamentos .descricao_cobertura h2, #apartamentos .descricao_cobertura span, #apartamentos .grupo_descricao h3 {
-	color: #8a2529;
-}
-#comerciais .fundo_verde {
-	background: #fcb040 !important;
-}
-
 .fixo_top, .fixo_right, .fixo_bottom, .fixo_left {
 	position: fixed;
 	background: #FFF;
-	z-index: 99999;
+	
 }
 .fixo_top {
 	width: 100%;
@@ -461,18 +166,312 @@ body {
 	padding-top: 74px;
 	margin: 9px 0px 9px 18px;
 }
+.bt_right a img , .bt_left a img, .footer img {
+	border: none;
+}
+.home_inner, .cobertura_inner, .apartamentos_inner, .localizacao_inner {
+	width: 82%;
+	float: left;
+	font-size: 0.85em;
+	position: relative;
+	color: #686868;
+	margin: 30px 35px 0px 40px;
+	padding: 0px;
+	display: inline;
+	height: 94%;
+}
+
+.logo_imagem {
+	margin: 80px 200px 0px 0px;
+	right: 0px;
+	position: absolute;
+}
+.logo_elvira {
+	background: transparent url('../images/logo_elvira.png') no-repeat left top;
+	width: 125px;
+	height: 177px;
+	margin-top: 25px;
+	margin-left: 55px;
+	display: inline-block;
+	z-index: 999;
+	position: absolute;
+	background-size: 100%;
+}
+
+/*COMPARTILHAR LINKS*/
+.compartilhar {	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	margin: 0px 40px 60px 0px;
+	z-index: 9999;
+}
+.compartilhar h5 {
+	margin-bottom: 5px;
+	font: normal 12px "signika_regular", Tahoma;
+	color: #58595b;
+	margin-right: 10px;
+	text-align: right;
+}
+.compartilhar ul {
+	list-style: none;
+}
+.compartilhar ul li {
+	/*float: left;*/
+	margin: -2px 0px;
+	text-align: right;
+	width: 59px;
+	height: 60px;
+}
+.compartilhar .facebook {
+	background: transparent url('../images/bt_compartilhe.png') no-repeat left top;
+}
+.compartilhar .twitter {
+	background: transparent url('../images/bt_compartilhe.png') no-repeat -59px top;
+}
+.compartilhar .google {
+	background: transparent url('../images/bt_compartilhe.png') no-repeat -118px top;
+}
+/*FIM DO COMPARTILHAR*/
+
+/*RODAPE*/
+.footer h3 {
+	position: fixed;
+	bottom: 7px;
+	right: 30px;
+	z-index:99999;
+}
+.footer h3 a, .footer h3, .footer h3 a:active{
+	font: normal 13px "din_light", Tahoma;
+	color: #686868;
+	text-decoration: none;
+	
+}
+.footer img {
+	margin-left: 3px;
+	margin-top: -2px;
+}
+/*FIM DO RODAPE*/
+
+/*Fundo cinza*/
 .back {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	background: #000;
-	opacity: 0;
+	opacity: 0.8;
 }
+/*FIM DO FUNDO CINza*/
+/*Detalhes*/
 .inner .detalhe {
 	display: none;
-	width: 2000;
+	width: 2000px;
+}
+.detalhe_cobertura {
+	display: inline-block;
+	margin: 100px 0px 0px 200px;
+}
+.detalhe_comerciais {
+	margin-left: 350px !important;
 }
 
+.detalhe_cobertura .planta_cobertura .ver_planta {
+	font: normal 14px "signika_regular", Tahoma;
+	color: #fff;
+	background: #82cfca url('../images/bt_verplanta.png') no-repeat bottom left;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	cursor: pointer;
+}
+.detalhe_cobertura .planta_cobertura .ver_planta:hover {
+	background-position: top left;
+}
+.ver_planta_ativo {
+	background: #024f4a !important;
+}
+.detalhe_cobertura .planta_cobertura .ver_planta h4 {
+	padding: 45px 5px 0px 5px;
+}
+.detalhe_cobertura .planta_cobertura .planta, .detalhe_cobertura .planta_cobertura .ver_planta, .descricao_cobertura, .imagens_cobertura, .planta_cobertura, .descricao_cobertura, .grupo_descricao{
+	float: left;
+}
+.detalhe_cobertura .planta_cobertura .planta {
+	margin: 15px 0px 0px -100px;
+}
+#apartamentos .planta_cobertura .planta {
+	margin-top: 35px;
+}
+.detalhe_cobertura .planta_cobertura .planta img {
+	width: 450px;
+}
+.detalhe_cobertura .planta_cobertura .planta ul{
+	list-style: none;
+}
+/*Descrição*/
+.section h2 {
+	margin: 50px 0px 30px 0px;
+}
+.descricao_cobertura {
+	text-align: center;
+	width: 280px;
+	background: #fff;
+	margin: 0px 20px;
+}
+#comerciais .descricao_cobertura {
+	width: 350px;
+	padding-bottom: 30px;
+}
+#comerciais .descricao_cobertura h2, #comerciais .descricao_cobertura span, #comerciais .grupo_descricao h3{
+	color: #fcb040 !important;
+}
+.descricao_cobertura h2 {
+	color: #82cfca;
+	font: normal 40px "signika_regular", Tahoma;
+}
+.descricao_cobertura p {
+	color: #666666;
+	font: normal 14px "signika_regular", Tahoma;
+	margin: 20px 35px;
+	line-height: 18pt;
+	text-align: left;
+}
+.descricao_cobertura h5 {
+	margin-right: 35px;
+	text-align: right;
+	color: #808285;
+	font: normal 12px "signika_light", Tahoma;
+}
+.descricao_cobertura h5 span {
+	color: #82cfca;
+	font: normal 24px "signika_regular", Tahoma;
+}
+.icones {
+	text-align: center;
+}
+.icones img {
+	margin: 15px 5px;
+}
+.imagens_cobertura .grupo img {
+	margin-bottom: 5px;
+	width: 188px;
+	height: 100px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.grupo_descricao {
+	margin-left: 20px;
+}
+
+.grupo_descricao h3 {
+	font: normal 21px "signika_regular", Tahoma;
+	color: #82cfca;
+	margin-bottom: 10px;
+}
+.grupo_descricao ul {
+	list-style: none;
+}
+.grupo_descricao ul li {
+	font: normal 14px "signika_regular", Tahoma;
+	color: #fff;
+	padding: 3px 0px;
+}
+
+.imagem_grande {
+	background: none !important;
+	padding: 0px !important;
+}
+
+.fundo_verde {
+	height: 100px;
+	background: #82cfca;
+	width: 75px;
+	float: left;
+}
+#apartamentos .fundo_verde, #apartamentos .detalhe_cobertura .planta_cobertura .ver_planta {
+	background: #8a2529;
+}
+#apartamentos .detalhe_cobertura .planta_cobertura .ver_planta:hover {
+	background: #8a2529 url('../images/ver_planta_red.jpg') no-repeat left top;
+}
+#apartamentos .descricao_cobertura h2, #apartamentos .descricao_cobertura span, #apartamentos .grupo_descricao h3 {
+	color: #8a2529;
+}
+#comerciais .fundo_verde {
+	background: #fcb040 !important;
+}
+
+.fixo_top, .fixo_right, .fixo_bottom, .fixo_left {
+	position: fixed;
+	background: #FFF;
+	z-index: 99999;
+}
+
+/*FIM DO DETALHE*/
+
+
+/*Imagem com zoom*/
+.esticada {
+	width: 600px !important;
+	height: 380px !important;
+}
+.esticada, .logo_elvira {
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+/*fim do css da imagem com zoom*/
+
+/*Tab localizacao*/
+.localizacao_mapa {
+	height: 100%;
+	margin-left: -15px;
+}
+
+.localizacao_detalhes {
+	width: 35%;
+	background: #a7a9a9;
+	position: absolute;
+	right: 0;
+	height: 100%;
+	top: 0;
+}
+
+.localizacao_detalhes .detalhes_titulo h3{
+	font: normal 18px 'signika_regular';
+	color: #515151 ;
+}
+.detalhes_titulo {
+	margin: 100px 0px 35px 70px;
+	
+}
+.detalhes_titulo h3 {
+	margin-bottom: 9px;
+}
+.detalhes_titulo hr {
+	border: 1px outset #000;
+	border-bottom: none;
+	width: 230px; 
+	text-align:left;
+}
+.detalhes_corpo {
+	margin: 0px 200px 35px 70px;
+}
+.detalhes_corpo h4 {
+	font: normal 28px "signika_regular", Tahoma;
+	color: #fff;
+	line-height: 38px;
+}
+.detalhes_corpo p {
+	margin-top: 30px;
+	font: normal 15px "signika_regular", Tahoma;
+	color: #fff;
+	line-height: 22px;
+}
+/*FIM da tab localizacao*/
+/*BOTAO CONTATO*/
 .contato_wrapper {
 	bottom: 0px;
 	position: fixed;
@@ -482,6 +481,7 @@ body {
 }
 .bt_contato {
 	margin: 0px 0px 40px 70px;
+	
 }
 .bt_contato a, .bt_contato a:hover{
 	/*background: white;*/
@@ -489,23 +489,28 @@ body {
 	padding: 15px 40px;
 	background-color:#fcb040;	
 	background-image: linear-gradient(to bottom, rgba(254,201,129,1), rgba(254,201,129,.6) 49%, rgba(254,201,129,0) 50%, rgba(254,201,129,.4));
-	background-image: -moz-linear-gradient(top, rgba(254,201,129,1), rgba(254,201,129,.6) 49%, rgba(254,201,129,0) 50%, rgba(254,201,129,.4));
-	background-image: -webkit-gradient(top, rgba(254,201,129,1), rgba(254,201,129,.6) 49%, rgba(254,201,129,0) 50%, rgba(254,201,129,.4));
+	background-image: -moz-linear-gradient(top, rgba(254,201,129,1), rgba(254,201,129,.6) 49%, rgba(254,201,129,0) 50%, rgba(254,201,129,.4));	
 	background-image: -webkit-linear-gradient(top, rgba(254,201,129,1), rgba(254,201,129,.6) 49%, rgba(254,201,129,0) 50%, rgba(254,201,129,.4));
 	color: #fff;
 	text-decoration: none;
 	font-family: signika_regular;
+	font-size:13px;
+	font-style:normal;
 }
 .contato {
 	position: absolute;
-	margin: -430px 0px 0px 25px;
+	margin: -470px 0px 0px 25px;
 	display: none;
 }
 .contato_inner {
 	background: #fcb040;
 	padding: 1px;
 }
-.contato_inner p{
+.contato_inner h4 {
+	font-family: signika_regular;
+	font-size: 13px;
+}
+.contato_inner 	p{
 	text-align: center;
 	margin-bottom: 10px;
 	font-family: signika_regular;
@@ -531,7 +536,7 @@ body {
 	font-size: 13px;
 }
 .campo_contato input, .campo_contato textarea, .campo_contato select {
-	width: 160px;
+	width: 140px;
 	background: #fdbf68;
 	border: 1px solid #fdb958;
 	height: 20px;
@@ -554,24 +559,7 @@ body {
 	color: #fff;
 	padding: 5px 15px;
 }
-.andar {
-	position: fixed;
-	right: 0px;
-	margin: 30px 0px;
-	background: transparent url(../images/miniatura_predio.png) no-repeat;
-	z-index: 99999;
-	width: 150px;
-	height: 120px;
-}
-.andar p {
-	border: 2px solid #000;
-	width: 32px;
-	height: 12px;
-	border-radius: 2px;
-	margin-top: 0px;
-	margin-left: 55px;
-	display: none;
-}
+/*FIM DO BOTAO CONTATO*/
 
 
 
@@ -581,11 +569,11 @@ body {
 	}
 	
 	.logo_imagem {
-		margin: 0 auto;
+		margin: 0px auto;
 	}
 	.logo_imagem img {
 		width: 300px;
-		margin-top: 200;
+		margin-top: 200px;
 	}
 	.nav {
 		display: none;
@@ -593,7 +581,7 @@ body {
 	.section {
 		float: none;
 		display: block;
-		margin: 0 auto;
+		margin: 0px auto;
 		width: auto;
 		margin: 40px 20px;
 	}
@@ -608,7 +596,7 @@ body {
 	}
 	
 }
-@media (max-width :860)  {
+@media (max-width :860px)  {
 	.fundo_verde {
 		height: 45px;
 		width: 25px;
@@ -622,10 +610,10 @@ body {
 		height: 170px !important;
 	}
 	.detalhe_cobertura .planta_cobertura .planta img {
-			width: 200px;
+		width: 200px;
 	}
 }
-@media (min-width : 860px) and (max-width :1400)  {
+@media (min-width : 860px) and (max-width :1400px)  {
 	.fundo_verde {
 		height: 75px;
 		width: 55px;
@@ -648,16 +636,10 @@ body {
 		background-size: 100%;
 	}
 }
-@media (min-width: 1401) {
+@media (min-width: 1401px) {
 	.esticada {
 		width: 600px !important;
 		height: 380px !important;
 	}
 		
-}
-.esticada, .logo_elvira {
-	-webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
