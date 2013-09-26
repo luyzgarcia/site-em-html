@@ -29,6 +29,10 @@ $(function() {
 			$("#"+formulario).toggle('slow');
 		});
 		
+		$('.nav_mini').click(function(e) {
+			mostrarOcultarMenu(true);
+		});
+		
 		//Coloca o map na posicao
 		var mapOptions = {
 			zoom: 5,
@@ -60,13 +64,16 @@ $(function() {
 			return false;
 		});
 		
+		fundoNoite();
+		
 	});
 	$(document).ready(function() {
 		$(".icones img[title]").tooltips();
 		
 		$(".zoom").elevateZoom({
 			zoomWindowWidth:550,
-			zoomWindowHeight:450
+			zoomWindowHeight:450,
+			zoomWindowPosition: 2
 		});
 		ajustatamanhos();
 	});
@@ -88,8 +95,12 @@ $(function() {
 		$('.planta_cobertura').click( function() {
 			ocultarCoberturas();
 			var selt = $(this);
+			if(($(this).children('.planta').is(':visible'))== false) {
+				mostrarOcultarMenu(false);
+			}else {
+				mostrarOcultarMenu(true);
+			}
 			togglePlanta(true, selt);
-			//mostrarMenu();
 		});	
 		
 		$('.imagens_cobertura .grupo').click(function () {
@@ -116,6 +127,7 @@ $(function() {
 			$(this).children('.fundo_verde').show('slow');
 			$('.imagens_cobertura').stop().animate({marginTop: "0px"});
 			//$('.nav').show('slow');
+			mostrarOcultarMenu(true);
 		}else {
 			$(this).children('img').addClass('imagem_grande');
 			$(this).children('img').addClass('esticada');
@@ -124,6 +136,7 @@ $(function() {
 			//$(this).
 			$(".imagens_cobertura").animate({marginTop: -105}, 400);
 			//$('.nav').hide('slow');
+			mostrarOcultarMenu(false);
 		}
 	});
 		
@@ -131,6 +144,7 @@ $(function() {
 	
 	function togglePlanta(ocultar, self) {
 		if(typeof(ocultar) === 'undefined') ocultar = true;
+		
 		if(ocultar) {
 			$($(self).children('.planta')).toggle( 'slow',function () {} );
 		}else {
@@ -188,6 +202,7 @@ $(function() {
 		event.preventDefault();
 	}
 	function moveandar(andar) {
+		$('.imagens_cobertura').stop().animate({marginTop: "0px"});
 		if(andar == '#home') {
 			$('.andar p').stop().hide().animate({marginTop: "0px"});		
 		}else if(andar == '#cobertura') {
@@ -228,3 +243,23 @@ $(function() {
         });*/
       }
 google.maps.event.addDomListener(window, 'load', initialize);
+
+	function fundoNoite() {
+		var data = new Date();
+		
+		if(data.getHours > 18 && data.getHours() < 5) {
+			$('#home').css('background-image', "url('assets/images/fundo_noite.jpg')");
+		}
+	}
+	
+	function mostrarOcultarMenu(opcao) {
+		//alert(opcao);
+//		$('.nav').hide('slow');	
+		if(opcao == true) {
+			//$('.nav').show('slow');	
+			$('.nav').animate({marginBottom: '30px'});
+		}else if (opcao == false) {
+//			$('.nav').toggle(false, 400);
+			$('.nav').animate({marginBottom: '-100px'});
+		}
+	}

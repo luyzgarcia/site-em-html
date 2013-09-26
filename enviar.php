@@ -8,12 +8,18 @@ $emailcontato = trim($_POST['email']);
 $mensagem		= $_POST['mensagem'];
 
 //Email de quem ira receber
-$emaildestinatario	= 'luyzgarcia@gmail.com';
-$emailremetente = 'atendimento@proiz.com.br';
+$emaildestinatario	= 'taipasempreendimentos@gmail.com';
+$emailremetente = 'sac@residencialdonaelvira.com.br';
 
 
 $horaenviado = date("d/m/y H:i");
-
+if($motivo == 0) {
+	$motivo = 'Contato';
+}else if($motivo == 1) {
+	$motivo = 'Sugestão';
+}else if($motivo ==2) {
+	$motivo = 'Dúvidas';
+}
 $mensagemHTML = '<p>Formulario Contato Residencial Dona Elvira<p>
 <p>Nome: '.$nomeremetente.'</b>
 <p>Email: '.$emailcontato.'</b>
@@ -29,15 +35,15 @@ $headers.= "Content-type: text/html; charset=utf-8\r\n";
 $headers.= "From: $emailremetente\r\n"; //rementente
 $headers.= "Return-Path: $emaildestinatario \r\n";
 
-echo ''.$mensagemHTML;
+//echo ''.$mensagemHTML;
 
-//$envio	= mail($emaildestinatario, "Formulario Conte sua historia", $mensagemHTML, $headers);
+$envio	= mail($emaildestinatario, "Formulario Contato Residencial Dona Elvira", $mensagemHTML, $headers);
 //print_r($envio);
-//if($envio) {
-//	echo false;
-//}else {
-//	echo 'Erro ao enviar teu email';
-//}
+if($envio) {
+	echo 'Email enviado com sucesso!';
+}else {
+	echo 'Erro ao enviar teu email, tente novamente mais tarde!';
+}
 
 
 ?>
